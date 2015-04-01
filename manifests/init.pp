@@ -1,6 +1,6 @@
 class user_accounts {
 
-	$root_password = hiera('accounts::users::root::password')
+	$root_password = hiera('accounts::users::root::password', '')
 
 	if $root_password != '' {
 		user { 'root':
